@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/smk3ids.css">
+
+    <script src="../script.js"></script>
+
+    <title>Archive</title>
+</head>
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 2.5em;
+        padding: 3rem;
+    }
+
+    #workcatalogue ul {
+        list-style: none;
+    }
+
+    #workcatalogue li {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        display: block;
+        width: fit-content;
+        cursor: pointer;
+        color:var(--muted)
+    }
+
+    #workcatalogue li:hover {
+        color:var(--text)
+    }
+
+    #workcatalogue li.active {
+        color:var(--text)
+    }
+
+    .grid-item figure {
+        display: block;
+        margin: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    img,.image {
+        width: 100%;
+        border-radius: 1.25rem;
+    }
+
+    .image:hover{
+        box-shadow: var(--shadow);
+    }
+
+    .caption {
+        text-decoration: none;
+        color:var(--text);
+    }
+
+    .title{
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-bottom: 0.4rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+
+
+@media (max-width: 800px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2.5em;
+        padding: 3rem;
+    }
+}
+
+</style>
+
+<body>
+    <header id="header">
+        <div class="headercontainer">
+            <a class="name" href="../index.html">Iris Zhang</a>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../about/index.html">Who I Am</a></li>
+                    <li><a href="../Work/index.html">What I Do</a></li>
+                    <li><a href="index.html" class="is-current">Everything</a></li>
+                    <!--<li><a href="../photography/index.html">Viewfinder</a></li>-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="grid">
+            <nav id="workcatalogue" class="grid-item">
+                <ul>
+                    <li>Animation</li>
+                    <li>Drawing</li>
+                    <li>Game Design</li>
+                    <li>Graphic Design</li>
+                    <li>Illustration</li>
+                    <li>Mixed Media</li>
+                </ul>
+            </nav>
+            <div class="grid-item" id="illustration">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/The Dog Triptych.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        The Dog Triptych
+                    </div>
+                    <div class="description">Illustration • 2024</div>
+                </a>
+            </div>
+            <div class="grid-item" id="illustration">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/Erhu.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        Erhu
+                    </div>
+                    <div class="description">Illustration • 2023</div>
+                </a>
+            </div>
+            <div class="grid-item" id="drawing">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/Cut Paper Drawing.png" class="  ">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        Cut Paper Drawing
+                    </div>
+                    <div class="description">Drawing • 2025</div>
+                </a>
+            </div>
+            <div class="grid-item" id="illustration">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/Anne of Green Gables.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        Anne of Green Gables
+                    </div>
+                    <div class="description">Illustration • 2024</div>
+
+                </a>
+            </div>
+            <div class="grid-item" id="illustration">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/Eldie.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        Eldie
+                    </div>
+                    <div class="description">Illustration • 2022</div>
+
+                </a>
+            </div>
+            <div class="grid-item" id="graphicdesign">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/Instrument Icon Design.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        Instrument Icon Design
+                    </div>
+                    <div class="description">Graphic Design • 2025</div>
+
+                </a>
+            </div>
+            <div class="grid-item" id="animation">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/Don't Take the Ruff Way.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        Don't Take the Ruff Way
+                    </div>
+                    <div class="description">Animation • 2022</div>
+                </a>
+            </div>
+            <div class="grid-item" id="illustration">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/A Virtual Sunday on the Island of La Grande Jatte.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        A Virtual Sunday on the Island of La Grande Jatte
+                    </div>
+                    <div class="description">Illustration • 2024</div>
+
+                </a>
+            </div>
+            <div class="grid-item" id="drawing">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/Still Life Drawing.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        Still Life Drawing
+                    </div>
+                    <div class="description">Drawing • 2023</div>
+                </a>
+            </div>
+            <div class="grid-item" id="gamedesign">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/The Last Drop.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                       The Last Drop
+                    </div>
+                    <div class="description">Game Design • 2025</div>
+                </a>
+            </div>
+            <div class="grid-item" id="mixedmedia">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/Constraints.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title"> Constraints </div>
+                    <div class="description">Mixed Media • 2024</div>
+                </a>
+            </div>
+            <div class="grid-item" id="mixedmedia">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/'Selves' Portrait.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        'Selves' Portrait
+                    </div>
+                    <div class="description">Mixed Media • 2023</div>
+                </a>
+            </div>
+            <div class="grid-item" id="graphicdesign">
+                <a href="">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/25SP Spring Ensemble Concert Poster.png">
+                    </figure>
+                </a>
+                <a href="" class="caption">
+                    <div class="title">
+                        Spring Ensemble Concert Poster
+                    </div>
+                    <div class="description">Graphic Design • 2025</div>
+                </a>
+            </div>
+        </div>
+        </section>
+        </main>
+</body>
+
+</html>

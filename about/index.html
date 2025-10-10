@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/smk3ids.css">
+
+  <title>Who I am</title>
+</head>
+
+<style>
+   .container {
+    padding-inline: 15rem; /* space on both sides */
+    box-sizing: border-box;
+  }
+
+  .aboutgrid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .headshot {
+    margin: 0;
+    overflow: hidden;
+    background: #141517;
+    border-radius: 2rem;
+    height: auto;
+    width: 18rem;
+    flex: 0 0 auto;          /* don’t let flexbox shrink it */
+  aspect-ratio: 1 / 1;     /* square box */
+  }
+
+  .headshot img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .bio h1 {
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .bio p {
+    font-size:1rem;
+  }
+
+  .special{
+    font-style:italic;
+    color: var(--muted);
+  }
+</style>
+
+<body>
+  <header id="header">
+    <div class="headercontainer">
+      <a class="name" href="../index.html">Iris Zhang</a>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html" class="is-current">Who I Am</a></li>
+          <li><a href="../work/index.html">What I Do</a></li>
+          <li><a href="../archive/index.html">Everything</a></li>
+          <!--<li><a href="../photography/index.html">Viewfinder</a></li>-->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="about">
+      <div class="container aboutgrid">
+        <figure class="headshot">
+          <img src="../image/profile.png" alt="me">
+        </figure>
+
+        <div class="bio">
+          <h1>Hi, I’m Iris.</h1>
+          <p>
+            I’m a sophomore BFA Communication Design student at Washington University in St. Louis.
+          </p>
+
+          <p>
+            Lately, I’ve been exploring web design, graphic design, and game design. I built this website using HTML, CSS, and JavaScript.
+          </p>
+
+          <p class="special">
+            You’ll often find Iris wandering with her Nikon Zf, chasing color, light, and the little moments she loves to hold onto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
