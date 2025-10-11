@@ -91,6 +91,62 @@ a:active{
     color:var(--text);
 }
 
+.projectnav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  text-transform: uppercase;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.15s ease-in-out;
+}
+
+.back::before {
+  content: "◀︎";
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.back:hover {
+  color: var(--text);
+}
+
+.next {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.15s ease-in-out;
+}
+
+.next::after {
+  content: "►";
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.next:hover {
+  color: var(--text);
+}
+
+.visitthesite {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.15s ease-in-out;
+}
+
+.visitthesite:hover {
+  color: var(--text);
+}
 </style>
 
 <body>
@@ -101,8 +157,7 @@ a:active{
                 <ul>
                     <li><a href="../../about/index.html">Who I Am</a></li>
                     <li><a href="../../Work/index.html" class="is-current">What I Do</a></li>
-                    <li><a href="../../Archive/index.html">Everything</a></li>
-                    <!--<li><a href="index.html">Viewfinder</a></li>-->
+                    <li><a href="../../Archive/index.html">Archive</a></li>
                 </ul>
             </nav>
         </div>
@@ -110,7 +165,6 @@ a:active{
 
     <main class="content">
         <div class="project-header">
-            <a class="back" href="../../work/index.html">◀︎ back</a>
             <h1 class="project-title">Laba Congee Recipe</h1>
             <div class="project-meta">
                 <p>Web Design • 2025</p>
@@ -128,8 +182,10 @@ a:active{
            
             <p>The goal is to create a layout that doesn’t just show instructions but also anticipates what the user might need in the moment, such as clarifying tricky steps, highlighting preparation details, and presenting information in a way that feels approachable and supportive.</p>
         </div>
-        <div>
-            <a href="https://iriszhang43.github.io/ifspring2025/recipe/complete/"> ▶ Visit the site.</a>
+        <div class="projectnav">
+            <a class="back" href="../25 Variations/index.html">Back</a>
+            <a class="visitthesite" href="https://iriszhang43.github.io/ifspring2025/recipe/complete/" target="_blank">Visit the site</a>
+            <a class="next" href="../25 Variations/index.html">Next</a>
         </div>
     </main>
 </body>

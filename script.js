@@ -199,6 +199,16 @@ document.addEventListener('DOMContentLoaded', () => {
   updateActive();
 });
 
+/*comingsoon alert*/
+const clickableItems = document.querySelectorAll('.comingsoon');
+
+    clickableItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            alert("Coming soon! This page is still in progress 🛠️");
+        });
+    });
+    
 /*feature work hover show text
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.project .projectpage').forEach(link => {

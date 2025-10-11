@@ -10,7 +10,7 @@
 
     <script src="script.js"></script>
 
-    <title>Website #1</title>
+    <title>Iris Zhang's Portfolio</title>
 </head>
 
 <style>
@@ -194,7 +194,7 @@
         aspect-ratio: 1/1;
         width: 300px;
         height: auto;
-        margin: 0.75rem
+        margin: 0.5rem
     }
 
     .photoitem img {
@@ -227,8 +227,8 @@
 
     @keyframes pop {
         0% {
-            transform: scale(.98);
-            opacity: .5;
+            transform: scale(0.98);
+            opacity: 0.5;
         }
 
         100% {
@@ -279,18 +279,17 @@
 
     .contactdropdown summary {
         cursor: pointer;
-        padding: .25rem .5rem;
+        padding: 0.25rem 0.5rem;
         outline: none;
         list-style: none;
         color: var(--muted);
-        transition: color .2s ease;
+        transition: color 0.2s ease;
     }
 
     .contactdropdown summary:hover {
         color: var(--text);
     }
 
-    /* arrow indicator */
     .contactdropdown summary::after {
         content: " ▼";
     }
@@ -340,7 +339,7 @@
         background: none;
         color: var(--muted);
         cursor: pointer;
-        transition: all .2s ease;
+        transition: all 0.2s ease;
     }
 
     .contact-form button:hover {
@@ -351,13 +350,12 @@
 <body>
     <header id="header">
         <div class="headercontainer">
-            <a class="name" href="index.html">Iris Zhang</a>
+            <a class="name is-current" href="index.html">Iris Zhang</a>
             <nav class="menu">
                 <ul>
                     <li><a href="about/index.html">Who I Am</a></li>
                     <li><a href="work/index.html">What I Do</a></li>
-                    <li><a href="archive/index.html">Everything</a></li>
-                    <!--<li><a href="photography/index.html">Viewfinder</a></li>-->
+                    <li><a href="archive/index.html">Archive</a></li>
                 </ul>
             </nav>
         </div>
@@ -425,7 +423,6 @@
 
         <section id="photo" class="section">
             <div class="container">
-                <!--<h1>Viewfinder</h1>-->
                 <button id="shutterBtn" class="shutter">📷</button>
                 <div class="grid photothumbnail">
                     <a class="photoitem" href=""><img src="image/photoitem/photoitem1.jpg"></a>
@@ -435,7 +432,6 @@
 
         <section id="contact" class="section contact">
             <div class="container">
-                <!--<h2>Contact</h2>-->
                 <p><a href="mailto:iris.z@wustl.edu">Email </a>•<a href="https://www.instagram.com/" rel="me">
                         Instagram</a> ·<a href="https://www.linkedin.com/" rel="me"> LinkedIn</a>
                 </p>

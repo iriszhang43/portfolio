@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/smk3ids.css">
 
-    <script src="script.js"></script>
-
     <title>25 Variations</title>
 </head>
 
@@ -82,6 +80,7 @@ a{
     text-decoration: none;
     color:var(--muted);
     cursor: pointer;
+    transition: all 0.15s ease-in-out;
 }
 a:hover{
     color:var(--text);
@@ -89,6 +88,63 @@ a:hover{
 }
 a:active{
     color:var(--text);
+}
+
+.projectnav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  margin-top: 4rem;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.15s ease-in-out;
+}
+
+.back::before {
+  content: "◀︎";
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.back:hover {
+  color: var(--text);
+}
+
+.next {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.15s ease-in-out;
+}
+
+.next::after {
+  content: "►";
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.next:hover {
+  color: var(--text);
+}
+
+.visitthesite {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.15s ease-in-out;
+}
+
+.visitthesite:hover {
+  color: var(--text);
 }
 
 </style>
@@ -101,8 +157,7 @@ a:active{
                 <ul>
                     <li><a href="../../about/index.html">Who I Am</a></li>
                     <li><a href="../../Work/index.html" class="is-current">What I Do</a></li>
-                    <li><a href="../../Archive/index.html">Everything</a></li>
-                    <!--<li><a href="index.html">Viewfinder</a></li>-->
+                    <li><a href="../../Archive/index.html">Archive</a></li>
                 </ul>
             </nav>
         </div>
@@ -110,7 +165,6 @@ a:active{
 
     <main class="content">
         <div class="project-header">
-            <a class="back" href="">◀︎ back</a>
             <h1 class="project-title">25 Variations</h1>
             <div class="project-meta">
                 <p>Web Design • 2025</p>
@@ -179,10 +233,15 @@ a:active{
                 </tr>
               </table>
         </div>
-        <div>
-            <a href="https://2025-fall-washu-iris.neocities.org/25%20Variations/"> ▶ Visit the site.</a>
+        <div class="projectnav">
+            <a class="back" href="../Laba Congee Recipe/index.html">Back</a>
+            <a class="visitthesite" href="https://2025-fall-washu-iris.neocities.org/25%20Variations/"target="_blank">Visit the site</a>
+            <a class="next" href="../Laba Congee Recipe/index.html">Next</a>
         </div>
     </main>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
