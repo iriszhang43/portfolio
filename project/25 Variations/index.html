@@ -2,245 +2,249 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="https://use.typekit.net/smk3ids.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/smk3ids.css">
 
-    <title>25 Variations</title>
+  <title>25 Variations</title>
 </head>
 
 <style>
-    .content {
-        max-width: 900px;
-        margin: 4rem auto;
-        padding: 0 1rem;
-    }
+  .content {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
 
-    .project-header {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
+  .project-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
-    .project-title {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
+  .project-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
 
-    .project-meta p {
-        color: var(--muted);
-        margin: 0.2rem 0;
-        font-size: 1rem;
-    }
+  .project-meta p {
+    color: var(--muted);
+    margin: 0.2rem 0;
+    font-size: 1rem;
+  }
 
-    .project-image {
-        margin-bottom: 2rem;
-        text-align: center;
-    }
+  .project-image {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
 
-    .project-image img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 1.5rem;
-    }
+  .project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+  }
 
-    .project-description {
-        line-height: 1.7;
-        font-size: 1rem;
-        color: #333;
-    }
+  .project-description {
+    line-height: 1.7;
+    font-size: 1rem;
+    color: #333;
+  }
 
-    .project-description p {
-        margin-bottom: 1.5rem;
-    }
+  .project-description p {
+    margin-bottom: 1.5rem;
+  }
 
-    .variation-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1rem;         
-  line-height: 1.25;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
+  .variation-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 
-.variation-table th,
-.variation-table td {
-  border: 0.5px solid var(--muted); 
-  padding: 0.6rem 0.8rem;
-  text-align: left;
-  vertical-align: top;
-}
+  .variation-table th,
+  .variation-table td {
+    border: 0.5px solid var(--muted);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    vertical-align: top;
+  }
 
-.variation-table th {
-  font-weight: 600;
-}
+  .variation-table th {
+    font-weight: 600;
+  }
 
-a{
+  a {
     text-decoration: none;
-    color:var(--muted);
+    color: var(--muted);
     cursor: pointer;
     transition: all 0.15s ease-in-out;
-}
-a:hover{
-    color:var(--text);
+  }
 
-}
-a:active{
-    color:var(--text);
-}
+  a:hover {
+    color: var(--text);
 
-.projectnav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  margin-top: 4rem;
-}
+  }
 
-.back {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--muted);
-  transition: color 0.15s ease-in-out;
-}
+  a:active {
+    color: var(--text);
+  }
 
-.back::before {
-  content: "◀︎";
-  margin-right: 6px;
-  vertical-align: middle;
-}
+  .projectnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    margin-top: 4rem;
+  }
 
-.back:hover {
-  color: var(--text);
-}
+  .back {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.15s ease-in-out;
+  }
 
-.next {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--muted);
-  transition: color 0.15s ease-in-out;
-}
+  .back::before {
+    content: "◀︎";
+    margin-right: 6px;
+    vertical-align: middle;
+  }
 
-.next::after {
-  content: "►";
-  margin-left: 6px;
-  vertical-align: middle;
-}
+  .back:hover {
+    color: var(--text);
+  }
 
-.next:hover {
-  color: var(--text);
-}
+  .next {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.15s ease-in-out;
+  }
 
-.visitthesite {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--muted);
-  transition: color 0.15s ease-in-out;
-}
+  .next::after {
+    content: "►";
+    margin-left: 6px;
+    vertical-align: middle;
+  }
 
-.visitthesite:hover {
-  color: var(--text);
-}
+  .next:hover {
+    color: var(--text);
+  }
 
+  .visitthesite {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.15s ease-in-out;
+  }
+
+  .visitthesite:hover {
+    color: var(--text);
+  }
 </style>
 
 <body>
-    <header id="header">
-        <div class="headercontainer">
-            <a class="name" href="../../index.html">Iris Zhang</a>
-            <nav class="menu">
-                <ul>
-                    <li><a href="../../about/index.html">Who I Am</a></li>
-                    <li><a href="../../Work/index.html" class="is-current">What I Do</a></li>
-                    <li><a href="../../Archive/index.html">Archive</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header id="header">
+    <div class="headercontainer">
+      <a class="name" href="../../index.html">Iris Zhang</a>
+      <nav class="menu">
+        <ul>
+          <li><a href="../../about/index.html">Who I Am</a></li>
+          <li><a href="../../work/index.html" class="is-current">What I Do</a></li>
+          <li><a href="../../archive/index.html">Archive</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="content">
-        <div class="project-header">
-            <h1 class="project-title">25 Variations</h1>
-            <div class="project-meta">
-                <p>Web Design • 2025</p>
-            </div>
-        </div>
+  <main class="content">
+    <div class="project-header">
+      <h1 class="project-title">25 Variations</h1>
+      <div class="project-meta">
+        <p>Web Design • 2025</p>
+      </div>
+    </div>
 
-        <div class="project-image">
-            <img src="../../image/workthumbnail/25 Variations.png" alt="25 Variations Thumbnail">
-        </div>
+    <div class="project-image">
+      <img src="../../image/workthumbnail/25 Variations.png" alt="25 Variations Thumbnail">
+    </div>
 
-        <div class="project-description">
-            <p>This project explores 25 variations of William Wordsworth’s poem <em>I Wandered Lonely as a Cloud</em> (1802).</p>
-            <p>The 25 variations are broken into 5 levels, each with specific constraints on the use of HTML and CSS.
-            </p>
+    <div class="project-description">
+      <p>This project explores 25 variations of William Wordsworth’s poem <em>I Wandered Lonely as a Cloud</em> (1802).
+      </p>
+      <p>The 25 variations are broken into 5 levels, each with specific constraints on the use of HTML and CSS.
+      </p>
 
-            <table class="variation-table">
-                <tr>
-                  <th colspan="5">25 Variations – William Wordsworth’s <em>I Wandered Lonely as a Cloud</em></th>
-                </tr>
-                <tr>
-                  <th>Level</th>
-                  <th>Description</th>
-                  <th>HTML Restrictions</th>
-                  <th>CSS Restrictions</th>
-                  <th>Focus</th>
-                </tr>
-              
-                <tr>
-                  <th>1</th>
-                  <td>Basic text structure and spacing</td>
-                  <td>Use only p, br, and &nbsp;</td>
-                  <td>None</td>
-                  <td>Experiment with breaking and shaping the text — spacing, density, scroll length</td>
-                </tr>
-              
-                <tr>
-                  <th>2</th>
-                  <td>Hierarchy and scale with markup</td>
-                  <td>Add div, span, headings (h1–h6), strong, em, lists, and internal a links</td>
-                  <td>None</td>
-                  <td>Explore hierarchy and scale using HTML only</td>
-                </tr>
-              
-                <tr>
-                  <th>3</th>
-                  <td>Introduce spatial composition</td>
-                  <td>Same as Levels 1–2</td>
-                  <td>Padding, border, margin, position, display, float, top/right/bottom/left, height, width</td>
-                  <td>Experiment with positioning — try very tall or very wide layouts</td>
-                </tr>
-              
-                <tr>
-                  <th>4</th>
-                  <td>Typography emphasis</td>
-                  <td>Same as Levels 1–2</td>
-                  <td>All Level 3 CSS plus: font-style, font-weight, font-size, font-family, text-align, line-height, letter-spacing, text-transform</td>
-                  <td>Focus on typographic hierarchy, rhythm, and scale</td>
-                </tr>
-              
-                <tr>
-                  <th>5</th>
-                  <td>Full visual freedom</td>
-                  <td>Any HTML element (except img, iframe, or external a links)</td>
-                  <td>Any CSS property</td>
-                  <td>Push the limits — use color, advanced layouts, animations, and consider accessibility</td>
-                </tr>
-              </table>
-        </div>
-        <div class="projectnav">
-            <a class="back" href="../Laba Congee Recipe/index.html">Back</a>
-            <a class="visitthesite" href="https://2025-fall-washu-iris.neocities.org/25%20Variations/"target="_blank">Visit the site</a>
-            <a class="next" href="../Laba Congee Recipe/index.html">Next</a>
-        </div>
-    </main>
+      <table class="variation-table">
+        <tr>
+          <th colspan="5">25 Variations – William Wordsworth’s <em>I Wandered Lonely as a Cloud</em></th>
+        </tr>
+        <tr>
+          <th>Level</th>
+          <th>Description</th>
+          <th>HTML Restrictions</th>
+          <th>CSS Restrictions</th>
+          <th>Focus</th>
+        </tr>
 
-    <script src="script.js"></script>
+        <tr>
+          <th>1</th>
+          <td>Basic text structure and spacing</td>
+          <td>Use only p, br, and &nbsp;</td>
+          <td>None</td>
+          <td>Experiment with breaking and shaping the text — spacing, density, scroll length</td>
+        </tr>
+
+        <tr>
+          <th>2</th>
+          <td>Hierarchy and scale with markup</td>
+          <td>Add div, span, headings (h1–h6), strong, em, lists, and internal a links</td>
+          <td>None</td>
+          <td>Explore hierarchy and scale using HTML only</td>
+        </tr>
+
+        <tr>
+          <th>3</th>
+          <td>Introduce spatial composition</td>
+          <td>Same as Levels 1–2</td>
+          <td>Padding, border, margin, position, display, float, top/right/bottom/left, height, width</td>
+          <td>Experiment with positioning — try very tall or very wide layouts</td>
+        </tr>
+
+        <tr>
+          <th>4</th>
+          <td>Typography emphasis</td>
+          <td>Same as Levels 1–2</td>
+          <td>All Level 3 CSS plus: font-style, font-weight, font-size, font-family, text-align, line-height,
+            letter-spacing, text-transform</td>
+          <td>Focus on typographic hierarchy, rhythm, and scale</td>
+        </tr>
+
+        <tr>
+          <th>5</th>
+          <td>Full visual freedom</td>
+          <td>Any HTML element (except img, iframe, or external a links)</td>
+          <td>Any CSS property</td>
+          <td>Push the limits — use color, advanced layouts, animations, and consider accessibility</td>
+        </tr>
+      </table>
+    </div>
+    <div class="projectnav">
+      <a class="back" href="../Laba Congee Recipe/index.html">Back</a>
+      <a class="visitthesite" href="https://2025-fall-washu-iris.neocities.org/25%20Variations/" target="_blank">Visit
+        the site</a>
+      <a class="next" href="../Laba Congee Recipe/index.html">Next</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 
 </body>
 

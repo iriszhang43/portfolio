@@ -31,16 +31,16 @@
         display: block;
         width: fit-content;
         cursor: pointer;
-        color:var(--muted);
+        color: var(--muted);
         transition: all 0.15s ease-in-out;
     }
 
     #workcatalogue li:hover {
-        color:var(--text)
+        color: var(--text)
     }
 
     #workcatalogue li.active {
-        color:var(--text)
+        color: var(--text)
     }
 
     .grid-item figure {
@@ -50,38 +50,39 @@
         margin-bottom: 20px;
     }
 
-    img,.image {
+    img,
+    .image {
         width: 100%;
         border-radius: 1.25rem;
     }
 
-    .image:hover{
+    .image:hover {
         box-shadow: var(--shadow);
     }
 
     .caption {
         text-decoration: none;
-        color:var(--text);
+        color: var(--text);
     }
 
-    .title{
+    .title {
         font-weight: 600;
         font-size: 1.25rem;
         margin-bottom: 0.4rem;
     }
-    .description{
+
+    .description {
         font-size: 1rem;
     }
 
-@media (max-width: 800px) {
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2.5em;
-        padding: 3rem;
+    @media (max-width: 800px) {
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 2.5em;
+            padding: 3rem;
+        }
     }
-}
-
 </style>
 
 <body>
@@ -91,7 +92,7 @@
             <nav class="menu">
                 <ul>
                     <li><a href="../about/index.html">Who I Am</a></li>
-                    <li><a href="../Work/index.html">What I Do</a></li>
+                    <li><a href="../work/index.html">What I Do</a></li>
                     <li><a href="index.html" class="is-current">Archive</a></li>
                 </ul>
             </nav>
@@ -238,7 +239,7 @@
                 </a>
                 <a href="#" class="caption comingsoon">
                     <div class="title">
-                       The Last Drop
+                        The Last Drop
                     </div>
                     <div class="description">Game Design • 2025</div>
                 </a>
@@ -282,9 +283,9 @@
             </div>
         </div>
         </section>
-        </main>
+    </main>
 
-        <script src="../script.js"></script>
+    <script src="../script.js"></script>
 
 </body>
 

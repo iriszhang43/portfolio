@@ -2,192 +2,199 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="https://use.typekit.net/smk3ids.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/smk3ids.css">
 
-    <title>Laba Congee Recipe</title>
+  <title>Laba Congee Recipe</title>
 </head>
 
 <style>
-    .content {
-        max-width: 900px;
-        margin: 4rem auto;
-        padding: 0 1rem;
-    }
+  .content {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
 
-    .project-header {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
+  .project-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
-    .project-title {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
+  .project-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
 
-    .project-meta p {
-        color: var(--muted);
-        margin: 0.2rem 0;
-        font-size: 1rem;
-    }
+  .project-meta p {
+    color: var(--muted);
+    margin: 0.2rem 0;
+    font-size: 1rem;
+  }
 
-    .project-image {
-        margin-bottom: 2rem;
-        text-align: center;
-    }
+  .project-image {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
 
-    .project-image img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 1.5rem;
-    }
+  .project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+  }
 
-    .project-description {
-        line-height: 1.7;
-        font-size: 1rem;
-        color: #333;
-    }
+  .project-description {
+    line-height: 1.7;
+    font-size: 1rem;
+    color: #333;
+  }
 
-    .project-description p {
-        margin-bottom: 1.5rem;
-    }
+  .project-description p {
+    margin-bottom: 1.5rem;
+  }
 
-    .variation-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1rem;         
-  line-height: 1.25;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
+  .variation-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 
-.variation-table th,
-.variation-table td {
-  border: 0.5px solid var(--muted); 
-  padding: 0.6rem 0.8rem;
-  text-align: left;
-  vertical-align: top;
-}
+  .variation-table th,
+  .variation-table td {
+    border: 0.5px solid var(--muted);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    vertical-align: top;
+  }
 
-.variation-table th {
-  font-weight: 600;
-}
+  .variation-table th {
+    font-weight: 600;
+  }
 
-a{
+  a {
     text-decoration: none;
-    color:var(--muted);
+    color: var(--muted);
     cursor: pointer;
-}
-a:hover{
-    color:var(--text);
+  }
 
-}
-a:active{
-    color:var(--text);
-}
+  a:hover {
+    color: var(--text);
 
-.projectnav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  margin-top: 4rem;
-  text-transform: uppercase;
-}
+  }
 
-.back {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--muted);
-  transition: color 0.15s ease-in-out;
-}
+  a:active {
+    color: var(--text);
+  }
 
-.back::before {
-  content: "◀︎";
-  margin-right: 6px;
-  vertical-align: middle;
-}
+  .projectnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    text-transform: uppercase;
+  }
 
-.back:hover {
-  color: var(--text);
-}
+  .back {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.15s ease-in-out;
+  }
 
-.next {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--muted);
-  transition: color 0.15s ease-in-out;
-}
+  .back::before {
+    content: "◀︎";
+    margin-right: 6px;
+    vertical-align: middle;
+  }
 
-.next::after {
-  content: "►";
-  margin-left: 6px;
-  vertical-align: middle;
-}
+  .back:hover {
+    color: var(--text);
+  }
 
-.next:hover {
-  color: var(--text);
-}
+  .next {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.15s ease-in-out;
+  }
 
-.visitthesite {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--muted);
-  transition: color 0.15s ease-in-out;
-}
+  .next::after {
+    content: "►";
+    margin-left: 6px;
+    vertical-align: middle;
+  }
 
-.visitthesite:hover {
-  color: var(--text);
-}
+  .next:hover {
+    color: var(--text);
+  }
+
+  .visitthesite {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.15s ease-in-out;
+  }
+
+  .visitthesite:hover {
+    color: var(--text);
+  }
 </style>
 
 <body>
-    <header id="header">
-        <div class="headercontainer">
-            <a class="name" href="../../index.html">Iris Zhang</a>
-            <nav class="menu">
-                <ul>
-                    <li><a href="../../about/index.html">Who I Am</a></li>
-                    <li><a href="../../Work/index.html" class="is-current">What I Do</a></li>
-                    <li><a href="../../Archive/index.html">Archive</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header id="header">
+    <div class="headercontainer">
+      <a class="name" href="../../index.html">Iris Zhang</a>
+      <nav class="menu">
+        <ul>
+          <li><a href="../../about/index.html">Who I Am</a></li>
+          <li><a href="../../work/index.html" class="is-current">What I Do</a></li>
+          <li><a href="../../archive/index.html">Archive</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="content">
-        <div class="project-header">
-            <h1 class="project-title">Laba Congee Recipe</h1>
-            <div class="project-meta">
-                <p>Web Design • 2025</p>
-            </div>
-        </div>
+  <main class="content">
+    <div class="project-header">
+      <h1 class="project-title">Laba Congee Recipe</h1>
+      <div class="project-meta">
+        <p>Web Design • 2025</p>
+      </div>
+    </div>
 
-        <div class="project-image">
-            <img src="../../image/workthumbnail/Laba Congee Recipe.png" alt="Laba Congee Recipe Thumbnail">
-        </div>
+    <div class="project-image">
+      <img src="../../image/workthumbnail/Laba Congee Recipe.png" alt="Laba Congee Recipe Thumbnail">
+    </div>
 
-        <div class="project-description">
-            <p>This project is a static, multi-panel recipe page designed with HTML and CSS.</p>
-                
-            <p>Beyond presenting the conventional recipe content including ingredients, steps, and timing, this recipe page is designed to offer extra context that makes the cooking process more accessible, intuitive, and human-centered.</p> 
-           
-            <p>The goal is to create a layout that doesn’t just show instructions but also anticipates what the user might need in the moment, such as clarifying tricky steps, highlighting preparation details, and presenting information in a way that feels approachable and supportive.</p>
-        </div>
-        <div class="projectnav">
-            <a class="back" href="../25 Variations/index.html">Back</a>
-            <a class="visitthesite" href="https://iriszhang43.github.io/ifspring2025/recipe/complete/" target="_blank">Visit the site</a>
-            <a class="next" href="../25 Variations/index.html">Next</a>
-        </div>
-    </main>
-    
-    <script src="script.js"></script>
+    <div class="project-description">
+      <p>This project is a static, multi-panel recipe page designed with HTML and CSS.</p>
+
+      <p>Beyond presenting the conventional recipe content including ingredients, steps, and timing, this recipe page is
+        designed to offer extra context that makes the cooking process more accessible, intuitive, and human-centered.
+      </p>
+
+      <p>The goal is to create a layout that doesn’t just show instructions but also anticipates what the user might
+        need in the moment, such as clarifying tricky steps, highlighting preparation details, and presenting
+        information in a way that feels approachable and supportive.</p>
+    </div>
+    <div class="projectnav">
+      <a class="back" href="../25 Variations/index.html">Back</a>
+      <a class="visitthesite" href="https://iriszhang43.github.io/ifspring2025/recipe/complete/" target="_blank">Visit
+        the site</a>
+      <a class="next" href="../25 Variations/index.html">Next</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 
 </body>
 
