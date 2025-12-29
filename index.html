@@ -12,53 +12,140 @@
 </head>
 
 <style>
-    h1 {
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        padding-bottom: 1.5rem;
-        text-align: center;
-        font-weight: 800;
+    .archive-layout {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        gap: 0;
     }
 
-    .intro {
-        /*background-color: aqua;*/
-        text-align: center;
-    }
-
-    #intro,
-    #intro .container {
+    body.landing-open {
         overflow: hidden;
     }
 
-
-    #intro span {
-        font-size: 1.75rem;
-        font-weight: 600;
-        display: inline-block;
-        white-space: nowrap;
-        padding-left: 100%;
-        padding-top: 1.5rem;
-        animation: float 12s linear infinite;
-    }
-
-    @keyframes float {
-        from {
-            transform: translateX(0);
-        }
-
-        to {
-            transform: translateX(-100%);
-        }
-    }
-
-    .workthumbnail {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-
-    .photothumbnail {
+    .landing {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
         display: flex;
+        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
+        padding: 2rem;
+        background: var(--bg);
+        transition: opacity 220ms ease, transform 220ms ease;
+    }
+
+    .landing.hidden {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+    }
+
+    .landing-inner {
+        width: 100%;
+        max-width: 42rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .landing-inner h1 {
+        margin: 0;
+        font-size: clamp(2rem, 1rem, 3.25rem);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+    }
+
+    .landing-inner p {
+        margin: 0;
+        font-size: clamp(1rem, 1.4vw, 1.25rem);
+        line-height: 1.6;
+        color: var(--muted);
+    }
+
+    .start-btn {
+        align-self: center;
+        padding: 0.9rem 1.4rem;
+        border: none;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-family: "ff-speak-web", sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.06em;
+        transition: all 1.5s ease;
+    }
+
+    .start-btn:hover {
+        color: var(--text);
+    }
+
+    .start-btn:active {
+        transform: translateY(0px);
+    }
+
+    .start-btn:focus-visible {
+        outline: 2px solid var(--text);
+        outline-offset: 4px;
+    }
+
+    .archive-left {
+        position: sticky;
+        top: 64px;
+    }
+
+    #pieceList {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: .25rem;
+    }
+
+    #pieceList li {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        display: block;
+        width: fit-content;
+        cursor: pointer;
+        color: var(--muted);
+        transition: all 0.15s ease-in-out;
+    }
+
+    #pieceList li:hover {
+        color: var(--text);
+    }
+
+    #pieceList li.active {
+        color: var(--text);
+    }
+
+    .left-inner {
+        padding: 3rem;
+        width: 100%;
+        position: sticky;
+        top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .archive-right {
+        height: calc(100vh - 64px);
+        overflow-y: auto;
+    }
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2.5em;
+        padding: 3rem;
     }
 
     .grid-item figure {
@@ -93,381 +180,20 @@
     .description {
         font-size: 1rem;
     }
-
-    /*
-    .project {
-        background: var(--panel);
-        border-radius: 1.25rem;
-        overflow: hidden;
-        transition: all .2s ease-in-out;
-        display: flex;
-    }
-
-    .project a {
-        text-decoration: none;
-        display: flex;
-        flex: 1 1 auto;
-        color: var(--text);
-    }
-
-    .project figure {
-        position: relative;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 auto;
-    }
-
-    .project figure>img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: filter .2s ease-in-out;
-        will-change: filter;
-    }
-
-    .project .overlay {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background 0.2s ease-in-out;
-    }
-
-    .project .overlay-content {
-        text-align: center;
-        color: white;
-        opacity: 0;
-        transition: opacity 0.2s ease-in-out 0.10s;
-    }
-
-    .project .overlay-title {
-        opacity: 1;
-        font-weight: 600;
-        font-size: 1.5rem;
-    }
-
-    .project .overlay-meta {
-        opacity: 1;
-        font-size: 1rem;
-        margin-top: 0.2rem;
-    }
-
-    .project:hover .overlay {
-        background: rgba(0, 0, 0, 0.25);
-    }
-
-    .project:hover .overlay-content {
-        opacity: 1;
-    }
-
-    .figcaptionflex {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .project figcaption {
-        padding: 15px 20px;
-    }
-
-    .project:hover {
-        box-shadow: var(--shadow);
-    }
-
-    .project:hover figure>img {
-        filter: blur(2px) brightness(.95);
-        transform: scale(1.01);
-    }*/
-
-    .photoitem {
-        border-radius: 1.25rem;
-        overflow: auto;
-        cursor: auto;
-        pointer-events: none;
-        aspect-ratio: 1/1;
-        width: 300px;
-        height: auto;
-        margin: 0.5rem
-    }
-
-    .photoitem img {
-        display: block;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-    }
-
-    .shutter {
-        display: block;
-        margin: -1rem auto 2rem;
-        align-items: center;
-        font-size: 3rem;
-        font-weight: 800;
-        border: none;
-        background: transparent;
-        color: var(--text);
-        cursor: pointer;
-    }
-
-    .shutter:hover {
-        transform: scale(1.2);
-        transition: transform 0.25s ease-in-out;
-    }
-
-    .shutter:active {
-        transform: scale(0.98);
-        transition: transform 0.07s ease-in-out;
-    }
-
-    @keyframes pop {
-        0% {
-            transform: scale(0.98);
-            opacity: 0.5;
-        }
-
-        100% {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-
-    .photothumbnail>* {
-        animation: none;
-    }
-
-    .photothumbnail.shuffling>* {
-        animation: pop 0.15s ease;
-    }
-
-
-    .contact a {
-        color: var(--muted);
-        text-decoration: none;
-    }
-
-    .contact a:hover {
-        text-decoration: none;
-        color: var(--text);
-    }
-
-    .contact .container {
-        text-align: center;
-    }
-
-    .contactdropdown {
-        list-style: none;
-        padding: 0;
-        margin: 1rem 0 0;
-        text-align: center;
-    }
-
-    .contactdropdown>li {
-        margin: 0.25rem 0;
-    }
-
-    .contactdropdown details {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-    }
-
-    .contactdropdown summary {
-        cursor: pointer;
-        padding: 0.25rem 0.5rem;
-        outline: none;
-        list-style: none;
-        color: var(--muted);
-        transition: color 0.2s ease;
-    }
-
-    .contactdropdown summary:hover {
-        color: var(--text);
-    }
-
-    .contactdropdown summary::after {
-        content: " ▼";
-    }
-
-    .contactdropdown details[open]>summary::after {
-        content: " ▲";
-    }
-
-    .contact-form {
-        margin: 1rem auto 0;
-        display: inline-flex;
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        max-width: 28rem;
-        text-align: left;
-    }
-
-    .contact-form label {
-        font-weight: 400;
-        color: var(--muted);
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        padding: 0.6rem;
-        font-size: 1rem;
-        border: 1px solid var(--muted);
-        border-radius: 0.5rem;
-    }
-
-    input:focus {
-        border-color: var(--text);
-        outline: none;
-    }
-
-    textarea:focus {
-        border-color: var(--text);
-        outline: none;
-    }
-
-    .contact-form button {
-        align-self: center;
-        padding: 0.6rem 1rem;
-        border: none;
-        background: none;
-        color: var(--muted);
-        cursor: pointer;
-        transition: all 0.2s ease;
-        font-family: "ff-speak-web", sans-serif;
-        font-size: 1rem;
-    }
-
-    .contact-form button:hover {
-        color: var(--text);
-    }
 </style>
 
 <body>
-    <header id="header">
-        <div class="headercontainer">
-            <a class="name is-current" href="index.html">Iris Zhang</a>
-            <nav class="menu">
-                <ul>
-                    <li><a href="about/index.html">Who I Am</a></li>
-                    <li><a href="work/index.html">What I Do</a></li>
-                    <li><a href="archive/index.html">Archive</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+    
     <main id="main">
-        <section id="intro" class="intro">
-            <div class="container">
-                <span>Hi! Nice to meet you!</span>
+        <div id="landing" class="landing" role="dialog" aria-modal="true" aria-label="Welcome">
+            <div class="landing-inner">
+                <h1>Hi, I'm Iris, and welcome to my world!</h1>
+                <p>Explore my selected work, experiments, and projects.</p>
+                <a class="start-btn" href="work/index.html">▶︎ Start</a>
             </div>
-        </section>
-
-        <section id="work" class="section">
-            <div class="container">
-                <h1>Featured Work</h1>
-                <div class="grid workthumbnail">
-
-                    <div class="grid-item">
-                        <a href="project/25 Variations/index.html">
-                            <figure class="image">
-                                <img src="image/workthumbnail/25 Variations.png">
-                            </figure>
-                        </a>
-                        <a href="../project/project 1/index.html" class="caption">
-                            <div class="title">
-                                25 Variations
-                            </div>
-                            <div class="description">Web Design • 2025</div>
-                        </a>
-                    </div>
-
-                    <div class="grid-item">
-                        <a href="project/Laba Congee Recipe/index.html">
-                            <figure class="image">
-                                <img src="image/workthumbnail/Laba Congee Recipe.png">
-                            </figure>
-                        </a>
-                        <a href="../project/project 1/index.html" class="caption">
-                            <div class="title">
-                                25 Variations
-                            </div>
-                            <div class="description">Web Design • 2025</div>
-                        </a>
-                    </div>
-
-                    <!--<article class="project">
-                        <a class="projectpage" href="project/25 Variations/index.html" target="_blank"
-                            data-title="25 Variations" data-meta="2025">
-                            <figure>
-                                <img src="image/workthumbnail/25 Variations.png" alt="25 Variations">
-                            </figure>
-                        </a>
-                    </article>
-                    <article class="project">
-                        <a class="projectpage" href="project/Laba Congee Recipe/index.html" target="_blank"
-                            data-title="Laba Congee Recipe" data-meta="2025">
-                            <figure>
-                                <img src="image/workthumbnail/Laba Congee Recipe.png" alt="Laba Congee Recipe">
-                            </figure>
-                        </a>
-                    </article>-->
-                </div>
-            </div>
-        </section>
-
-        <section id="photo" class="section">
-            <div class="container">
-                <button id="shutterBtn" class="shutter">📷</button>
-                <div class="grid photothumbnail">
-                    <a class="photoitem" href=""><img src="image/photoitem/photoitem1.jpg"></a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact">
-            <div class="container">
-                <p><a href="mailto:iris.z@wustl.edu">Email </a>•<a href="https://www.instagram.com/" rel="me">
-                        Instagram</a> ·<a href="https://www.linkedin.com/" rel="me"> LinkedIn</a>
-                </p>
-                <ul class="contactdropdown">
-                    <li>
-                        <details>
-                            <summary></summary>
-
-                            <form class="contact-form">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
-
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="3" required></textarea>
-
-                                <button type="submit">Submit</button>
-                            </form>
-                        </details>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer">
-            <small>© 2025 Iris Zhang</small>
-            <small>Last Updated October 2025</small>
         </div>
-    </footer>
-
+    </main>
     <script src="script.js"></script>
-
 </body>
 
 </html>

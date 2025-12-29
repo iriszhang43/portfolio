@@ -1,40 +1,4 @@
 
-/*archive filter*/
-document.addEventListener('DOMContentLoaded', () => {
-  const grid = document.querySelector('.grid');
-  const menu = document.querySelector('#workcatalogue');
-  if (!grid || !menu) return;
-
-  const allItems = Array.from(grid.querySelectorAll('.grid-item'))
-    .filter(el => el.id && el.id !== 'workcatalogue');
-
-  const show = els => els.forEach(el => el.style.display = '');
-  const hide = els => els.forEach(el => el.style.display = 'none');
-  const slug = s => s.toLowerCase().replace(/\s+/g, '').replace(/[^\w-]/g, '');
-
-  function filter(cat) {
-    if (!cat || cat === 'all') {
-      show(allItems);
-      return;
-    }
-    hide(allItems);
-    const matches = allItems.filter(el => el.id.toLowerCase() === cat);
-    show(matches);
-  }
-
-  filter('all');
-
-  const lis = menu.querySelectorAll('li'); 
-  lis.forEach(li => {
-    li.tabIndex = 0;        
-    const run = () => {
-      lis.forEach(x => x.classList.toggle('active', x === li));
-      filter(slug(li.textContent.trim()));
-    };
-    li.addEventListener('click', run);
-  });
-});
-
 /*shutter button shuffle*/
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.photothumbnail');
@@ -198,16 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateActive();
 });
 
-/*comingsoon alert*/
-const clickableItems = document.querySelectorAll('.comingsoon');
 
-    clickableItems.forEach(item => {
-        item.addEventListener('click', function(event) {
-            event.preventDefault();
-            alert("Coming soon! This page is still in progress 🛠️");
-        });
-    });
-    
 /*feature work hover show text
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.project .projectpage').forEach(link => {

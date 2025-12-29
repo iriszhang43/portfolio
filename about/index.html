@@ -13,7 +13,7 @@
 
 <style>
   .container {
-    padding-inline: 15rem;
+    padding-inline: 3rem;
     box-sizing: border-box;
   }
 
@@ -55,11 +55,69 @@
 
   .bio p {
     font-size: 1rem;
+    line-height: 1.25rem;
   }
 
   .special {
     font-style: italic;
     color: var(--muted);
+  }
+
+  @media (min-width: 1024px) {
+    .bio {
+    max-width: 50%;
+  }
+  }
+
+  @media (max-width: 1024px) {
+    .bio h1 {
+      font-size: 2rem;
+    }
+
+    .bio p {
+      font-size: 0.95rem;
+    }
+
+    .aboutgrid {
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .aboutgrid {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .headshot {
+      width: 20rem;
+    }
+
+    .bio {
+      text-align: left;
+    }
+
+    .bio h1 {
+      font-size: 1.8rem;
+    }
+
+    .bio p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .bio h1 {
+      font-size: 1.75rem;
+    }
+
+    .bio p {
+      font-size: 1rem;
+    }
+
+    .headshot {
+      width: 100%;
+    }
   }
 </style>
 
@@ -69,8 +127,8 @@
       <a class="name" href="../index.html">Iris Zhang</a>
       <nav class="menu">
         <ul>
-          <li><a href="index.html" class="is-current">Who I Am</a></li>
           <li><a href="../work/index.html">What I Do</a></li>
+          <li><a href="index.html" class="is-current">Who I Am</a></li>
           <li><a href="../archive/index.html">Archive</a></li>
         </ul>
       </nav>

@@ -91,8 +91,8 @@
             <a class="name" href="../index.html">Iris Zhang</a>
             <nav class="menu">
                 <ul>
-                    <li><a href="../about/index.html">Who I Am</a></li>
                     <li><a href="../work/index.html">What I Do</a></li>
+                    <li><a href="../about/index.html">Who I Am</a></li>
                     <li><a href="index.html" class="is-current">Archive</a></li>
                 </ul>
             </nav>
@@ -103,11 +103,13 @@
         <div class="grid">
             <nav id="workcatalogue" class="grid-item">
                 <ul>
-                    <li>Animation</li>
-                    <li>Drawing</li>
+                    <li class="active">All</li>
+                    <li>Web Design</li>
                     <li>Game Design</li>
                     <li>Graphic Design</li>
                     <li>Illustration</li>
+                    <li>Animation</li>
+                    <li>Drawing</li>
                     <li>Mixed Media</li>
                 </ul>
             </nav>
@@ -134,6 +136,19 @@
                         Erhu
                     </div>
                     <div class="description">Illustration • 2023</div>
+                </a>
+            </div>
+            <div class="grid-item" id="webdesign">
+                <a href="#" class="comingsoon">
+                    <figure class="image">
+                        <img src="../image/archivegriditem/Laba Congee Recipe.png">
+                    </figure>
+                </a>
+                <a href="#" class="caption comingsoon">
+                    <div class="title">
+                        Laba Congee Recipe
+                    </div>
+                    <div class="description">Web Design • 2024</div>
                 </a>
             </div>
             <div class="grid-item" id="drawing">
@@ -285,7 +300,67 @@
         </section>
     </main>
 
-    <script src="../script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const grid = document.querySelector('.grid');
+        const menu = document.querySelector('#workcatalogue');
+        if (!grid || !menu) return;
+      
+        const allItems = Array.from(grid.querySelectorAll('.grid-item'))
+          .filter(el => el.id && el.id !== 'workcatalogue');
+      
+        const show = els => els.forEach(el => el.style.display = '');
+        const hide = els => els.forEach(el => el.style.display = 'none');
+        const slug = s => s.toLowerCase().replace(/\s+/g, '').replace(/[^\w-]/g, '');
+      
+        function filter(cat) {
+          if (!cat || cat === 'all') {
+            show(allItems);
+            return;
+          }
+          hide(allItems);
+          const matches = allItems.filter(el => el.id.toLowerCase() === cat);
+          show(matches);
+        }
+      
+        const lis = Array.from(menu.querySelectorAll('li'));
+
+        function setActiveLi(activeLi) {
+          lis.forEach(x => x.classList.toggle('active', x === activeLi));
+        }
+
+        const allLi = lis.find(li => slug(li.textContent.trim()) === 'all');
+        filter('all');
+        if (allLi) setActiveLi(allLi);
+
+        lis.forEach(li => {
+          li.tabIndex = 0;
+
+          const run = () => {
+            const cat = slug(li.textContent.trim());
+            setActiveLi(li);
+            filter(cat);
+          };
+
+          li.addEventListener('click', run);
+          li.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              run();
+            }
+          });
+        });
+      });
+
+      const clickableItems = document.querySelectorAll('.comingsoon');
+
+    clickableItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            alert("Coming soon! This page is still in progress 🛠️");
+        });
+    });
+      </script>
 
 </body>
 
