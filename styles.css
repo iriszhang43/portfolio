@@ -26,7 +26,6 @@ body {
     color: var(--text);
     font-family: "ff-speak-web", sans-serif;
 
-    /* Keep footer at the bottom when page content is short */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
